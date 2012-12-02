@@ -206,7 +206,7 @@ class Sensors(Module):
     def get_packet(self, packet_code):
         if not isinstance(packet_code, int):
             raise Exception("Packet code must be an integer.")
-        if packet_code < 0 or code > 3:
+        if packet_code < 0 or packet_code > 3:
             raise Exception("Invalid packet code; it must lie between 0 and 3.")
 
         data = CMD_SENSORS + chr(packet_code)

@@ -226,16 +226,16 @@ class Sensors(Module):
 
         if mask & (SENSOR_ONE | SENSOR_TWO | SENSOR_THREE):
             # packet 0
-            data_object.add_data(self.get_packet(0))
+            data_object.add_data(self.get_packet(0), 0)
         else:
             if mask & SENSOR_ONE:
                 # packet 1
-                data_object.add_data(self.get_packet(1))
+                data_object.add_data(self.get_packet(1), 1)
             if mask & SENSOR_TWO:
                 # packet 2
-                data_object.add_data(self.get_packet(2))
+                data_object.add_data(self.get_packet(2), 2)
             if mask & SENSOR_THREE:
                 # packet 3
-                data_object.add_data(self.get_packet(3))
+                data_object.add_data(self.get_packet(3), 3)
 
         return data_object

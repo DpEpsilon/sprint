@@ -1,1 +1,1 @@
-from main import Roomba
+from main import *
